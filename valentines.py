@@ -3,25 +3,16 @@ import keyboard
 
 paused = False
 
-def unpause():
-    print("unpause() called")
-    global paused
-    paused = False
-    draw()
-
 def pause():
     global paused
     paused = True
-    pausing()  # Start watching for global to be changed.
+    pausing()
 
-def pausing():
-    if paused:
-        turtle.ontimer(pausing, 250)  # Check again after delay.
 
 pen = turtle.Turtle()
 
-pen.screen.onkeypress(pause)  # Reversed order of
-pen.screen.listen()             # these two statements.
+pen.screen.onkeypress(pause) 
+pen.screen.listen()             
 
 index = 0
 
@@ -32,6 +23,7 @@ def curve():
 
 def draw():
     global index
+
     if index % 2 == 0:
         pen.fillcolor('pink')
     else:

@@ -26,7 +26,7 @@ def draw():
 
     if index % 3 == 0:
         pen.fillcolor('pink')
-    else if index % 3 == 1:
+    elif index % 3 == 1:
         pen.fillcolor('yellow')
     else:
         pen.fillcolor('blue')

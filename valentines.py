@@ -6,7 +6,6 @@ paused = False
 def pause():
     global paused
     paused = True
-    pausing()
 
 
 pen = turtle.Turtle()
